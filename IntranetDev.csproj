@@ -1,0 +1,113 @@
+<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <Nullable>enable</Nullable>
+    <ImplicitUsings>enable</ImplicitUsings>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Models\IntranetContext.cs" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.AspNetCore.Authentication.Negotiate" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Design" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.EntityFrameworkCore.SqlServer" Version="8.0.8" />
+    <PackageReference Include="Microsoft.EntityFrameworkCore.Tools" Version="8.0.8">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+    <PackageReference Include="Microsoft.Identity.Web" Version="3.1.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Include="wwwroot\assets\device-demo-FINAL.psd" />
+    <None Include="wwwroot\assets\device-demo.psd" />
+    <None Include="wwwroot\assets\img\device-demo-FINAL.psd" />
+    <None Include="wwwroot\assets\img\device-demo.psd" />
+    <None Include="wwwroot\assets\inc\655-nyc-nav.asp" />
+    <None Include="wwwroot\assets\inc\footer.asp" />
+    <None Include="wwwroot\assets\inc\navbar.asp" />
+    <None Include="wwwroot\assets\inc\navbar.inc" />
+    <None Include="wwwroot\assets\js\js" />
+    <None Include="wwwroot\assets\js\readmore.js" />
+    <None Include="wwwroot\assets\js\site.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-grid.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-grid.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-grid.rtl.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-grid.rtl.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-reboot.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-reboot.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-reboot.rtl.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-reboot.rtl.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-utilities.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-utilities.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-utilities.rtl.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap-utilities.rtl.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap.rtl.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\css\bootstrap.rtl.min.css.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.bundle.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.bundle.js.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.bundle.min.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.bundle.min.js.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.esm.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.esm.js.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.esm.min.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.esm.min.js.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.js.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.min.js" />
+    <None Include="wwwroot\assets\lib\bootstrap\dist\js\bootstrap.min.js.map" />
+    <None Include="wwwroot\assets\lib\bootstrap\LICENSE" />
+    <None Include="wwwroot\assets\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.js" />
+    <None Include="wwwroot\assets\lib\jquery-validation-unobtrusive\jquery.validate.unobtrusive.min.js" />
+    <None Include="wwwroot\assets\lib\jquery-validation\dist\additional-methods.js" />
+    <None Include="wwwroot\assets\lib\jquery-validation\dist\additional-methods.min.js" />
+    <None Include="wwwroot\assets\lib\jquery-validation\dist\jquery.validate.js" />
+    <None Include="wwwroot\assets\lib\jquery-validation\dist\jquery.validate.min.js" />
+    <None Include="wwwroot\assets\lib\jquery-validation\LICENSE.md" />
+    <None Include="wwwroot\assets\lib\jquery\dist\jquery.js" />
+    <None Include="wwwroot\assets\lib\jquery\dist\jquery.min.js" />
+    <None Include="wwwroot\assets\lib\jquery\dist\jquery.min.map" />
+    <None Include="wwwroot\assets\old-junk\default-full.asp" />
+    <None Include="wwwroot\assets\old-junk\_old2024\default.asp" />
+    <None Include="wwwroot\assets\old-junk\_old2024\index.asp" />
+    <None Include="wwwroot\assets\pages.zip" />
+    <None Include="wwwroot\assets\pages\corp-employee-benefits.asp" />
+    <None Include="wwwroot\assets\pages\crisis-procedures.asp" />
+    <None Include="wwwroot\assets\pages\default.asp" />
+    <None Include="wwwroot\assets\pages\dei.asp" />
+    <None Include="wwwroot\assets\pages\ear-data-display.asp" />
+    <None Include="wwwroot\assets\pages\ear.asp" />
+    <None Include="wwwroot\assets\pages\footer.inc" />
+    <None Include="wwwroot\assets\pages\fp.asp" />
+    <None Include="wwwroot\assets\pages\hr.asp" />
+    <None Include="wwwroot\assets\pages\it.asp" />
+    <None Include="wwwroot\assets\pages\legal.asp" />
+    <None Include="wwwroot\assets\pages\mrkt-branding.asp" />
+    <None Include="wwwroot\assets\pages\navbar.inc" />
+    <None Include="wwwroot\assets\pages\old\intra_sub_page.asp" />
+    <None Include="wwwroot\assets\pages\old\intra_sub_page_accordion.asp" />
+    <None Include="wwwroot\assets\pages\old\sub.asp" />
+    <None Include="wwwroot\assets\pages\procurement.asp" />
+    <None Include="wwwroot\assets\pages\social.inc" />
+    <None Include="wwwroot\assets\pages\sub.asp" />
+    <None Include="wwwroot\assets\pages\travel.asp" />
+    <None Include="wwwroot\assets\scripts\read.js" />
+    <None Include="wwwroot\assets\_old2024\default.asp" />
+    <None Include="wwwroot\assets\_old2024\index.asp" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Migrations\" />
+    <Folder Include="Properties\PublishProfiles\" />
+  </ItemGroup>
+
+</Project>

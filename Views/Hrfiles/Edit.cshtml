@@ -1,0 +1,104 @@
+﻿@model IntranetDev.Models.Hrfile
+
+@{
+    ViewData["Title"] = "Edit";
+}
+<style>
+    .current-file-link {
+        text-decoration: underline;
+    }
+</style>
+<h1>Edit</h1>
+
+<h4>Hrfile</h4>
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form asp-action="Edit" method="post" enctype="multipart/form-data">
+
+        <dd class="col-sm-10">
+            <div class="form-group">
+                    @if (!string.IsNullOrEmpty(Model.FileName))
+                    {
+                    <label class="control-label">Current File:</label>
+                    <a asp-action="Download" asp-controller="Hrfiles" class="current-file-link" asp-route-id="@Model.FileId">@Model.FileName</a>
+                    }
+            </div>
+
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <input type="hidden" asp-for="FileId" />
+            <div class="form-group">
+                <label asp-for="FileName" class="control-label">File Name:</label>
+                <input asp-for="FileName" class="form-control" />
+                <span asp-validation-for="FileName" class="text-danger"></span>
+            </div>
+
+            <!-- File input for updating file -->
+            <div class="form-group">
+                <label asp-for="FileData" class="control-label">Update File:</label>
+                <input asp-for="FileData" type="file" class="form-control" />
+                <span asp-validation-for="FileData" class="text-danger"></span>
+            <span asp-validation-for="FileData" class="text-danger"></span>
+       
+
+        <div class="form-group">
+            <label asp-for="FileDetails" class="control-label">File Details:</label>
+            <input asp-for="FileDetails" class="form-control" />
+            <span asp-validation-for="FileDetails" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="display: none;">
+            <label asp-for="UploadedDate" class="control-label">Uploaded Date:</label>
+            <input asp-for="UploadedDate" class="form-control" readonly />
+            <span asp-validation-for="UploadedDate" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="display: none;">
+            <label asp-for="ModifiedDate" class="control-label">Modified Date:</label>
+            <input asp-for="ModifiedDate" class="form-control" readonly />
+            <span asp-validation-for="ModifiedDate" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="display: none;">
+            <label asp-for="UploadedBy" class="control-label">Uploaded by:</label>
+            <input asp-for="UploadedBy" class="form-control" readonly />
+            <span asp-validation-for="UploadedBy" class="text-danger"></span>
+        </div>
+        <div class="form-group" style="display: none;">
+            <label asp-for="ModifiedBy" class="control-label">Modified By:</label>
+            <input asp-for="ModifiedBy" class="form-control" readonly />
+            <span asp-validation-for="ModifiedBy" class="text-danger"></span>
+
+        </div>
+
+
+        <div class="form-group">
+            <label asp-for="Entity">Entity</label>
+            <select asp-for="Entity" class="form-control">
+                <option value="">Select Entity</option>
+                <option value="ESD">ESD</option>
+                <option value="DED">DED</option>
+                <option value="Shared">Shared</option>
+            </select>
+            <span asp-validation-for="Entity" class="text-danger"></span>
+        </div>
+        <div class="form-group">
+            <label asp-for="Section" class="control-label">HR Section</label>
+            <select asp-for="Section" class="form-control">
+                <option value="">Select HR Section</option>
+                <option value="Forms & Resources">Forms & Resources</option>
+                <option value="Policies & Handbooks"> Policies & Handbooks</option>
+                <option value="Reasonable Accommodation">Reasonable Accommodation</option>
+                <option value="Training & Development">Training & Development</option>
+                <option value="Retirement Planning">Retirement Planning</option>
+            </select>
+            <span asp-validation-for="Section" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <input type="submit" value="Save" class="btn btn-primary" />
+        </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>

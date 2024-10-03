@@ -1,0 +1,26 @@
+﻿@model IntranetDev.Models.Hrfile
+
+@{
+    ViewData["Title"] = "Search";
+}
+<hr />
+<div class="row">
+    <div class="col-md-4">
+        <form action="HrSearchResults">
+            <div class="form-group">
+                <label for="SearchPhrase" class="control-label"> Search File Name</label>
+                <input name="SearchPhrase" class="form-control" />
+
+            </div>
+            <div class="form-group">
+                <input type="submit" value="Search" class="btn btn-primary" />
+            </div>
+        </form>
+    </div>
+</div>
+
+<div>
+    <a asp-action="Index">Back to List</a>
+</div>
+
+

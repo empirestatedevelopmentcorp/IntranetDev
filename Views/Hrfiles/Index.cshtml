@@ -1,0 +1,69 @@
+﻿@model IEnumerable<IntranetDev.Models.Hrfile>
+
+@{
+    ViewData["Title"] = "Index";
+}
+
+<h1>Index</h1>
+
+<p>
+    <a asp-action="Create">Create New</a><br />
+    <a asp-action="HrSearchForm">Search</a>
+</p>
+<table class="table">
+    <thead>
+        <tr>
+            <th>
+                @Html.DisplayNameFor(model => model.FileName)
+            </th>
+            <th>
+                File
+            </th>
+            <th>
+                Last Updated
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Entity)
+            </th>
+            <th>
+                @Html.DisplayNameFor(model => model.Section)
+            </th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var item in Model)
+        {
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.FileName)
+                </td>
+                <td>
+                    <!-- Download link -->
+                    <a href="@Url.Action("Download", "Hrfiles", new { id = item.FileId })">Download</a>
+                </td>
+                <td>
+                    @if (item.ModifiedDate != null && item.ModifiedDate > item.UploadedDate)
+                    {
+                        @item.ModifiedDate
+                    }
+                    else
+                    {
+                        @item.UploadedDate
+                    }
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Entity)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Section)
+                </td>
+                <td>
+                    <a asp-action="Edit" asp-route-id="@item.FileId">Edit</a> |
+                    <a asp-action="Details" asp-route-id="@item.FileId">Details</a> |
+                    <a asp-action="Delete" asp-route-id="@item.FileId">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
